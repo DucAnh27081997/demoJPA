@@ -20,4 +20,9 @@ public class HashUtil {
         return hash(value + sdf.format(new Date()));
     }
 
+    public static String hashWithDate() throws NoSuchAlgorithmException {
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyy_HHmmss.SSS");
+        return hash(sdf.format(new Date()));
+    }
+
 }
