@@ -33,4 +33,9 @@ public class UserController {
         return "add 2 OK!";
     }
 
+    @GetMapping(value = "/showForTable/{x}")
+    public String showForTable(@PathVariable int x) {
+        return "showForTable  OK!";
+    }
+
 }
