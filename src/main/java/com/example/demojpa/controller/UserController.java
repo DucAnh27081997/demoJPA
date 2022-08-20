@@ -38,4 +38,8 @@ public class UserController {
         return "showForTable  OK!";
     }
 
+    @GetMapping(value = "/find/name/{name}/hashCode/{hashCode}")
+    public List<User> show(@PathVariable String name,@PathVariable String hashCode) {
+        return userService.findNameLike(name,hashCode);
+    }
 }

@@ -8,4 +8,5 @@ public interface UserService {
     public List<User> findAll();
     public void addAll(int x);
     public void addAll2(int x);
+    public List<User> findNameLike(String name, String hashCode);
 }

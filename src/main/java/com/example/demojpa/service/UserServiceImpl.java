@@ -3,8 +3,10 @@ package com.example.demojpa.service;
 import com.example.demojpa.entity.AuthorStatus;
 import com.example.demojpa.entity.User;
 import com.example.demojpa.repository.UserRepositoy;
+import com.example.demojpa.repository.specifications.UserSpecification;
 import com.example.demojpa.util.HashUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.DatatypeConverter;
@@ -66,4 +68,12 @@ public class UserServiceImpl implements UserService {
         }
     }
     //sua mot chut
+
+
+    @Override
+    public List<User> findNameLike(String name, String hashCode) {
+        Specification<User> specification = Specification.where(UserSpecification.findNameLike(name))
+                .or(UserSpecification.findHashCodeLike(hashCode));
+        return userRepositoy.findAll(specification);
+    }
 }
