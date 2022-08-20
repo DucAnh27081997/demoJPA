@@ -1,0 +1,6 @@
+JDBC_DATABASE_URL=postgres://klskibteaqvidn:5d0c18c8c377eed1d522a92210e19b70ec6c97307d7383fb24355517c3bed0fe@ec2-44-209-186-51.compute-1.amazonaws.com:5432/d27bp4earvpjrf
+JDBC_DATABASE_DATANAME=d27bp4earvpjrf
+JDBC_DATABASE_USERNAME=klskibteaqvidn
+JDBC_DATABASE_PASSWORD=5432
+JDBC_DATABASE_DRIVER=com.mysql.cj.jdbc.Driver
+SPRING_JPA_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSql9Dialect
