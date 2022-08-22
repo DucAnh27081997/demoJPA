@@ -25,6 +25,6 @@ INSERT INTO db_jpa_demo.user (USER_NAME, HASH_CODE, RULE, PHONE_NUMBER)
  VALUES ('ducla_2', '778899', '789', '356');
 
 
-select * from user where HASH_CODE like '%123%';
+select * from user where name like '%ducla%';
 
 
