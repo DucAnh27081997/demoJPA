@@ -1,6 +1,5 @@
 package com.example.demojpa.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -8,9 +7,6 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.UUID;
-
 
 @Entity
 @Getter
@@ -33,6 +29,12 @@ public class User {
 
     @Column(name = "NAME")
     private String name;
+
+    @Column(name = "DEPARTMENT")
+    private String department;
+
+    @Column(name = "SALARY")
+    private Double salary;
 
     @Column(name = "HASH_CODE", unique = true)
     private String hashCode;

@@ -25,6 +25,12 @@ INSERT INTO db_jpa_demo.user (USER_NAME, HASH_CODE, RULE, PHONE_NUMBER)
  VALUES ('ducla_2', '778899', '789', '356');
 
 
-select * from user where name like '%ducla%';
+select * from user where name like '%phong%';
 
+select * from rule;
 
+select * from user_rule;
+
+select u.department,sum(u.salary)from user u group by u.department;
+
+update  user set department = 'HR', salary = 3000 where name not like '%ducla%' and name not like '%phong%';

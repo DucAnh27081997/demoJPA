@@ -1,5 +1,6 @@
 package com.example.demojpa.service;
 
+import com.example.demojpa.dto.ReportSalaryDto;
 import com.example.demojpa.entity.AuthorStatus;
 import com.example.demojpa.entity.User;
 import com.example.demojpa.repository.UserRepositoy;
@@ -8,12 +9,9 @@ import com.example.demojpa.util.HashUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import javax.xml.bind.DatatypeConverter;
-import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -38,6 +36,25 @@ public class UserServiceImpl implements UserService {
     public Page<User> finAll(String name,String hashCode, Pageable pageable) {
         return userRepositoy.findBy(name,hashCode,pageable);
     }
+
+    @Override
+    public Double getSalaryByUUID(String uuid) {
+        return userRepositoy.getSalaryByUUID(uuid);
+    }
+
+    @Override
+    public List<ReportSalaryDto> salaryTotalOrderByDepartment() {
+        List<ReportSalaryDto> result = new ArrayList<>();
+        List<Object[]> data = userRepositoy.salaryTotalOrderByDepartment();
+        for (Object[] objs: data) {
+            ReportSalaryDto sub = new ReportSalaryDto();
+            sub.setDepartment(String.valueOf(objs[0]));
+            sub.setTotalSaraly(String.valueOf(objs[1]));
+            result.add(sub);
+        }
+        return result;
+    }
+
 
     @Override
     public Page<User> findAll(Pageable pageable) {
