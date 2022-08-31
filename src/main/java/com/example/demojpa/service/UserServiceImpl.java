@@ -4,7 +4,7 @@ import com.example.demojpa.dto.ReportSalaryDto;
 import com.example.demojpa.entity.AuthorStatus;
 import com.example.demojpa.entity.User;
 import com.example.demojpa.repository.UserRepositoy;
-import com.example.demojpa.repository.specifications.UserSpecification;
+//import com.example.demojpa.repository.specifications.UserSpecification;
 import com.example.demojpa.util.HashUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -102,13 +102,18 @@ public class UserServiceImpl implements UserService {
             System.out.println(e.getMessage());
         }
     }
-    //sua mot chut
-
 
     @Override
     public List<User> findNameLike(String name, String hashCode) {
-        Specification<User> specification = Specification.where(UserSpecification.findNameLike(name))
-                .or(UserSpecification.findHashCodeLike(hashCode));
-        return userRepositoy.findAll(specification);
+        return null;
     }
+    //sua mot chut
+
+
+//    @Override
+//    public List<User> findNameLike(String name, String hashCode) {
+//        Specification<User> specification = Specification.where(UserSpecification.findNameLike(name))
+//                .or(UserSpecification.findHashCodeLike(hashCode));
+//        return userRepositoy.findAll(specification);
+//    }
 }

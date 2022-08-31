@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping(value = "/api/company/")
 public class CompanyController {
     @Autowired
     CompanyService companyService;
@@ -44,7 +45,7 @@ public class CompanyController {
         return "add OK";
     }
 
-    @RequestMapping(value = "/add-company-2", method = RequestMethod.POST)
+    @RequestMapping(value = "/add-company-2", method = RequestMethod.PUT)
     public String add(@RequestBody Company company) {
         try {
             companyService.save(company);
@@ -67,7 +68,6 @@ public class CompanyController {
         }
         return "add OK";
     }
-
 
     @RequestMapping(value = "/add-employee/{id}", method = RequestMethod.GET)
     public String add(@PathVariable(name = "id") Long id) {

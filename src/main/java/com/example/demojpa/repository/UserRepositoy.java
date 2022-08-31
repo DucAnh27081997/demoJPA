@@ -2,7 +2,7 @@ package com.example.demojpa.repository;
 
 import com.example.demojpa.dto.ReportSalaryDto;
 import com.example.demojpa.entity.User;
-import com.example.demojpa.repository.impl.UserCustomRepository;
+//import com.example.demojpa.repository.impl.UserCustomRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -14,7 +14,7 @@ import com.example.demojpa.dto.ReportSalaryDto;
 import java.util.List;
 
 @Repository
-public interface UserRepositoy extends JpaRepository<User, String>, JpaSpecificationExecutor<User>, UserCustomRepository {
+public interface UserRepositoy extends JpaRepository<User, String>, JpaSpecificationExecutor<User> { //UserCustomRepository
 //    List<User> findAllByNameLike(String name , Pageable pageable);
     Page<User> findAllByNameLike(String name , Pageable pageable);
 

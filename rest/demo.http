@@ -1,0 +1,56 @@
+
+### GET findAll
+GET http://localhost:8080/api/user/findAll
+Content-Type: application/json
+
+### GET AddAll2
+GET http://localhost:8080/api/user/AddAll2/20
+Content-Type: application/json
+
+### GET find
+GET http://localhost:8080/api/user/find/name/ducla_11_31082022_114241.247/hashCode/7A4CAC49E45B7224F24E2036E1777752
+Content-Type: application/json
+
+### GET find
+GET  http://localhost:8080/api/company/findAll
+Content-Type: application/json
+
+
+### POST find
+PUT  http://localhost:8080/api/company/add-company-2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Military technical Academy",
+  "employees": [
+    {
+      "id": 3,
+      "nameEmployee": "Cao Xuan DUy",
+      "phone": "1267341872",
+      "addresses": [
+        {
+          "id": 1,
+          "nameAddress": "Hoc Vien Hau Can"
+        },
+        {
+          "id": 2,
+          "nameAddress": "Hoc Vien Ngoai Giao"
+        },
+        {
+          "id": 3,
+          "nameAddress": "227 Phung Hung"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nameEmployee": "Cao Xuan DUy 2",
+      "phone": "11111",
+      "addresses": [
+
+      ]
+    }
+  ]
+}
+
