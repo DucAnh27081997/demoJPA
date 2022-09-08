@@ -25,4 +25,8 @@ public class HashUtil {
         return hash(sdf.format(new Date()));
     }
 
+    public static boolean checkChan(int a) {
+        return (a % 2 == 0) ? true : false;
+    }
+
 }

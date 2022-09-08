@@ -89,4 +89,9 @@ public class UserController {
     public List<ReportSalaryDto> salaryTotalOrderByDepartment() {
         return userService.salaryTotalOrderByDepartment();
     }
+
+    @GetMapping(value = "/deliveryMoney")
+    public String deliveryMoney() {
+        return userService.deliveryMoney("ducla","nhq",3000d);
+    }
 }

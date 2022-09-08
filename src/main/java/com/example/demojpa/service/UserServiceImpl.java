@@ -116,4 +116,10 @@ public class UserServiceImpl implements UserService {
 //                .or(UserSpecification.findHashCodeLike(hashCode));
 //        return userRepositoy.findAll(specification);
 //    }
+
+
+    @Override
+    public String deliveryMoney(String from, String to, Double money) {
+        return userRepositoy.dileveryMoney(from,to,money);
+    }
 }

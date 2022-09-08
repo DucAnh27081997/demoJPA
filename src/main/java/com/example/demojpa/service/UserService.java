@@ -17,4 +17,6 @@ public interface UserService {
     public void addAll(int x);
     public void addAll2(int x);
     public List<User> findNameLike(String name, String hashCode);
+
+    public String deliveryMoney(String from,String to, Double money);
 }

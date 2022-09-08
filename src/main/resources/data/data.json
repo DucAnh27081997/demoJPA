@@ -1,0 +1,66 @@
+[
+  {
+    "id": 2,
+    "name": "Military technical Academy",
+    "employees": [
+      {
+        "id": 3,
+        "nameEmployee": "Cao Xuan DUy",
+        "phone": "1267341872",
+        "addresses": [
+          {
+            "id": 1,
+            "nameAddress": "Hoc Vien Hau Can"
+          },
+          {
+            "id": 2,
+            "nameAddress": "Hoc Vien Ngoai Giao"
+          },
+          {
+            "id": 3,
+            "nameAddress": "227 Phung Hung"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "nameEmployee": "Cao Xuan DUy 2",
+        "phone": "11111",
+        "addresses": [
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Military technical Academy",
+    "employees": [
+      {
+        "id": 9,
+        "nameEmployee": "Cao Xuan DUy",
+        "phone": "1267341872",
+        "addresses": [
+          {
+            "id": 1,
+            "nameAddress": "Hoc Vien Hau Can"
+          },
+          {
+            "id": 2,
+            "nameAddress": "Hoc Vien Ngoai Giao"
+          },
+          {
+            "id": 3,
+            "nameAddress": "227 Phung Hung"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "nameEmployee": "Cao Xuan DUy 2",
+        "phone": "11111",
+        "addresses": [
+        ]
+      }
+    ]
+  }
+]
