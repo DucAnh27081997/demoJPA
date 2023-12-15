@@ -3,11 +3,16 @@ package com.example.demojpa.controller;
 import com.example.demojpa.entity.Company;
 import com.example.demojpa.entity.Employee;
 import com.example.demojpa.service.CompanyService;
+import com.example.demojpa.util.HashUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @RestController
 public class CompanyController {
@@ -92,5 +97,15 @@ public class CompanyController {
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String hello() {
         return "hello";
+    }
+
+    public static void main(String[] args) throws NoSuchAlgorithmException {
+        BigInteger prime = new BigInteger(2048,100,new Random());
+        System.out.println(prime);
+        System.out.println(prime.isProbablePrime(100));
+
+        System.out.println(HashUtil.hash(prime.toString()));
+        System.out.println(HashUtil.hash("admin"));
+
     }
 }
